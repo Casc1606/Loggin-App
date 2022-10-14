@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Citas</title>
+    <link rel="stylesheet" href="./estilo.css">
+    <script src="main2.js"></script>
+  </head>
+
+  <body>
+
+    <div class="box">
+    <h1 class="tittle">Mi primera página</h1>
+
+      <h2 class="tittle">Recopilación de Información</h2>
+      
+      <h3 class="tittle">Tablas y formularios</h3>
+    </div>
+
+      <form action="">
+        <fieldset>
+          <Legend>Información</Legend>
+          Nombre:<br>
+          <input type="text" name="Nombre" class="input" id="id_nombre"><br>
+          Apellido:<br>
+          <input type="text"name="Apellido" class="input" id="id_apellido"><br>
+          Correo:<br>
+          <input type="mail" name="Correo" class="input" id="id_correo"><br>
+          Número:<br>
+          <input type="text" name="Número" class="input" id="id_numero"><br>
+          Nacionalidad:<br>
+          <input type="text" name="Nacionalidad" class="input" id="id_nacionalidad"><br>
+          Ocupación:<br>
+          <input type="text" name="Ocupación" class="input" id="id_ocupacion"><br>
+          <br>
+          <input type="button" value="Autocompletar" class="button" id="id_autocompletar"><br>
+          <br>
+          <input type="button" value="Enviar" class="button" id="id_enviar"><br>
+          <br>
+          <input type="button" value="Alerta" class="button" id="id_alerta">
+        </fieldset>
+      </form>
+      <br>
+      <div>
+        <table border="1" id="id_tabla">
+          <label>Información usuarios</label>
+          <br>
+            <thead>
+              <tr>
+                <th colspan="6">Datos usuarios</th>
+              </tr>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Número</th>
+                <th>Nacionalidad</th>
+                <th>Ocupación</th>
+              </tr>
+            </thead>
+
+            <tbody id="id_tbody">
+              <tr>
+                <td>Andrés</td>
+                <td>Carne de res</td>
+                <td>andres@elmelo.com</td>
+                <td>3321232322</td>
+                <td>Colombiano</td>
+                <td>Chef</td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <td>Sally</td>
+                <td>Salamanca</td>
+                <td>sally@gmail.com</td>
+                <td>3321232222</td>
+                <td>Colombiana</td>
+                <td>Profesora</td>
+              </tr>
+            </tbody>
+
+            <tfoot id="id_tfoot">
+
+            </tfoot>
+        </table>
+      </div>
+
+  </body>
+</html>

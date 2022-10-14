@@ -1,0 +1,48 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body { 
+    margin: 0%;
+    padding: 0%;
+}
+
+.box {
+    background-color: rgb(106, 106, 167, 0.322);
+    padding: 40px 0 40px 0;
+}
+
+.tittle {
+    text-align: center;
+}
+
+form {
+    margin: 0 0 0 50px;
+    font-size: 13px;
+    width: 400px;
+}
+
+table {
+    margin: 0 15px 0 15px;
+    border-color: black;
+    width: 50%;
+    text-align: center
+}
+
+thead {
+    border-color: black;
+    background-color: rgb(87, 87, 170);
+}
+
+tbody {
+    background-color: rgba(106, 106, 167, 0.322);
+    font-size: 13px;
+}
+
+.input{
+    width: 80%;
+}
+
+.button:hover {
+    background-color: rgba(3, 3, 3, 0.411);
+}
