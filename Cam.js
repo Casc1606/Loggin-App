@@ -41,20 +41,6 @@ function llegadaDeDatos(data) {
 
 let infoLlegada; 
 
-function addNewRowToTable (datos) {
-        
-        
-    var table = getElementById("tbody");
-    var row = table.insertRow(0);
-
-    addCellWithValue (0, datos.nombre, row)
-    addCellWithValue (1, datos.apellido, row)
-    addCellWithValue (2, datos.correo, row)
-    addCellWithValue (3, datos.numero, row)
-    addCellWithValue (4, datos.nacionalidad, row)
-    addCellWithValue (5, datos.ocupacion, row)
-}
-
 function autoCompletarDatos(nombre, apellido, correo, numero, ocupacion, nacionalidad) {
     getElementById(idInputNombre).value = nombre;
     getElementById(idInputApellido).value = apellido;
@@ -97,6 +83,20 @@ function doOnClick () {
 
     addNewRowToTable(datos)
     traerInformacionInicial();
+}
+
+function addNewRowToTable (datos) {
+        
+        
+    var table = getElementById("tbody");
+    var row = table.insertRow(0);
+
+    addCellWithValue (0, datos.nombre, row)
+    addCellWithValue (1, datos.apellido, row)
+    addCellWithValue (2, datos.correo, row)
+    addCellWithValue (3, datos.numero, row)
+    addCellWithValue (4, datos.nacionalidad, row)
+    addCellWithValue (5, datos.ocupacion, row)
 }
 
 function addCellWithValue (index, value, row) {
