@@ -46,8 +46,12 @@ function getOnePokemon () {
 
 function llegadaDeDatosPokemon (resultado) {
     console.log(resultado.sprites.front_default);
-    const imgPokemon = document.getElementById("imgPokemon");
-    imgPokemon.src = resultado.sprites.front_default;
+    const imgPokemonFrontal = document.getElementById("imgPokemonFrontal");
+    imgPokemonFrontal.src = resultado.sprites.front_default;
+    console.log(resultado.sprites.back_default);
+    const imgPokemonTrasera = document.getElementById("imgPokemonTrasera");
+    imgPokemonTrasera.src = resultado.sprites.back_default;
+    // añadir acordeon que muestre imagen frontal, lateral y trasera.
 }
 
 function getRandomInt(max) {
