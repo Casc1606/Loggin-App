@@ -8,7 +8,7 @@ function iniciar() {
 
     botonPokemon.onclick = () => {
         console.log("Quieres pokemons?")
-        traerInformacionPokemon();
+        getAllPokemon();
     }
 
     botonEnviar.onclick = () => {
@@ -17,11 +17,15 @@ function iniciar() {
     }
 }
 
-function traerInformacionPokemon() {
+function getAllPokemon () {
+    consumirApi('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0', llegadaDeDatos);
+}
+
+function consumirApi(urlParam, sucessFuntionParam) {
     $.ajax({
-        url: 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0',
+        url: urlParam,
         dataType: 'json',
-        success: llegadaDeDatos
+        success: sucessFuntionParam
     });
 }
 
@@ -33,6 +37,17 @@ function llegadaDeDatos(data) {
     pokemon = data.results[pokemonRandom];
     autoCompletarDatos(pokemon.name, pokemon.url)
     console.log(pokemon);
+    getOnePokemon();
+}
+
+function getOnePokemon () {
+    consumirApi(pokemon.url, llegadaDeDatosPokemon)
+}
+
+function llegadaDeDatosPokemon (resultado) {
+    console.log(resultado.sprites.front_default);
+    const imgPokemon = document.getElementById("imgPokemon");
+    imgPokemon.src = resultado.sprites.front_default;
 }
 
 function getRandomInt(max) {
@@ -57,7 +72,7 @@ function doOnClick() {
     console.log(datos);
 
     addNewRowToTable(datos)
-    traerInformacionPokemon();
+    getAllPokemon();
 }
 
 function addNewRowToTable(datos) {

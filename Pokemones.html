@@ -18,51 +18,68 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 
-    <div style="max-width: 400px; text-align: center; margin: 7% 35%">
-        <form>
-            <div class="mb-3">
-                <div id="emailHelp" class="form-text">
-                    <h1>Adivina el pokemon!</h1>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="mb-3">
+                        <div id="emailHelp" class="form-text">
+                            <h1>Adivina el pokemon!</h1>
+                        </div>
+                        <label for="exampleInput" class="form-label">Pokemon</label>
+                        <input type="text" class="form-control" id="pokemonInput" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInput1" class="form-label">Url</label>
+                        <input type="text" class="form-control" id="urlInput">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="bringThePokemon_btn">Bring the Pokemon</button>
+                    <button type="button" class="btn btn-primary" id="send_btn">Send</button>
+                </form>
+            </div>
+            <div class="col">
+                Insertar acordeon con imagenes (frontal, de lado y trasera)
+                <div class="container">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" id="imgPokemon">
+                        <div class="card-body">
+                            <h5 class="card-title">Imagen Frontal Pokemon</h5>
+                        </div>
+                    </div>
                 </div>
-                <label for="exampleInput" class="form-label">Pokemon</label>
-                <input type="text" class="form-control" id="pokemonInput" aria-describedby="emailHelp">
             </div>
-            <div class="mb-3">
-                <label for="exampleInput1" class="form-label">Url</label>
-                <input type="text" class="form-control" id="urlInput">
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-dark table-striped" style="max-width: 50%; margin-left: 50%, 0%" ;>
+                    <thead>
+                        <tr>
+                            <th colspan="6">Pokemones API</th>
+                        </tr>
+                        <tr>
+                            <th>Pokemon</th>
+                            <th>Url</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="id_tbody">
+                        <tr>
+                            <td>Snorlax</td>
+                            <td>http://believe.in.youself.com/</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td>Pikachu</td>
+                            <td>htts23://sometimeago.com.co/s/</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <button type="button" class="btn btn-primary" id="bringThePokemon_btn">Bring the Pokemon</button>
-            <button type="button" class="btn btn-primary" id="send_btn">Send</button>
-        </form>
+        </div>
     </div>
 
-    <div style="max-width: 90%; text-align: center; margin: 7% 9%; padding: 0 25%;">
-        <table class="table table-dark table-striped" style="max-width: 50%; margin-left: 50%, 0%" ;>
-            <thead>
-                <tr>
-                    <th colspan="6">Pokemones API</th>
-                </tr>
-                <tr>
-                    <th>Pokemon</th>
-                    <th>Url</th>
-                </tr>
-            </thead>
-
-            <tbody id="id_tbody">
-                <tr>
-                    <td>Snorlax</td>
-                    <td>http://believe.in.youself.com/</td>
-                </tr>
-            </tbody>
-
-            <tbody>
-                <tr>
-                    <td>Pikachu</td>
-                    <td>htts23://sometimeago.com.co/s/</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
     <script src="pokemones.js"></script>
 </body>
