@@ -5,6 +5,7 @@ window.onload = () => {
 function iniciar() {
     let botonEnviar = document.getElementById("send_btn")
     let botonPokemon = document.getElementById("bringThePokemon_btn")
+    let botonTraerMiApi = document.getElementById("bringmyapi_btn")
 
     botonPokemon.onclick = () => {
         console.log("Quieres pokemons?")
@@ -15,10 +16,18 @@ function iniciar() {
         console.log("Quieres enviar?");
         doOnClick();
     }
+
+    botonTraerMiApi.onclick = () => {
+        getMyOwnApi();
+    }
 }
 
 function getAllPokemon () {
-    consumirApi('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0', llegadaDeDatos);
+    consumirApi('http://localhost:250/pokemones', llegadaDeDatos);
+}
+
+function getMyOwnApi () {
+    consumirApi("http://localhost:250/pokemones", (response) => {console.log(response)});
 }
 
 function consumirApi(urlParam, sucessFuntionParam) {
