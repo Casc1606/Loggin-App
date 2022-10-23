@@ -16,6 +16,7 @@ function iniciar () {
 
 function login (user, password) {
     if (user === "Camilo" && password === "1234") {
+        alert("Datos correctos, bienvenido!")
         window.location.href="Cam.html";
     } else {
         $("#exampleModal").modal("show")
